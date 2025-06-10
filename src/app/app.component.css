@@ -1,0 +1,30 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #212529, #343a40);
+  color: #fff;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+h2.h4 {
+  border-left: 4px solid #5A189A;
+  padding-left: 0.5rem;
+  color: #fff;
+}
+
+.container-fluid {
+  min-height: 100vh;
+}
+
+.img-fluid {
+  border-radius: 1rem;
+}

@@ -1,0 +1,27 @@
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s;
+  background-color: #fff;
+  color: #212529;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.btn-primary {
+  background-color: #5A189A;
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #7B2CBF;
+}

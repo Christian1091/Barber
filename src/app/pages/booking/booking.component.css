@@ -1,0 +1,24 @@
+ td {
+      cursor: pointer;
+      height: 60px;
+      vertical-align: middle;
+    }
+
+    td.available {
+      background-color: #f0f0f0;
+    }
+
+    td.selected {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    td.unavailable {
+      background-color: #dc3545;
+      color: white;
+      cursor: not-allowed;
+    }
+
+    .modal-dialog {
+      margin-top: 10vh;
+    }

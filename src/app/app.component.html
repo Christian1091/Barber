@@ -1,0 +1,27 @@
+<div class="container-fluid bg-dark text-white p-4">
+  <header class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h3">Barbería Elegante</h1>
+  </header>
+
+  <section class="mb-5">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <img src="assets/barberia.jpg" class="img-fluid rounded shadow" alt="Barbería Elegante">
+      </div>
+      <div class="col-md-6">
+        <h2 class="h4">Sobre Nosotros</h2>
+        <p>Somos una barbería moderna dedicada a resaltar tu estilo personal. Ofrecemos cortes clásicos y modernos,
+          afeitados y tratamientos para el cabello y la barba.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h4 mb-3">Nuestros Barberos</h2>
+    <app-barber-list (selectBarber)="openBooking($event)"></app-barber-list>
+  </section>
+
+  <app-booking *ngIf="selectedBarber" [selectedBarber]="selectedBarber" [existingBookings]="existingBookings"
+    (bookingConfirmed)="addBooking($event)" (closePopup)="closeBooking()">
+  </app-booking>
+</div>
