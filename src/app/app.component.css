@@ -1,30 +1,46 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #212529, #343a40);
-  color: #fff;
+/* Resaltar la opción activa del menú */
+
+.nav-link.active {
+    font-weight: bold;
+    color: #ffc107 !important;
+    /* Amarillo */
+    border-bottom: 2px solid #ffc107;
+    transition: all 0.3s ease;
 }
 
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #fff;
+
+/* Opcional: efecto al pasar el mouse por los enlaces */
+
+.nav-link:hover {
+    color: #adb5bd !important;
+    /* Gris claro */
 }
 
-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+
+/* Espaciado entre ítems del menú */
+
+.nav .nav-item {
+    margin-left: 1rem;
 }
 
-h2.h4 {
-  border-left: 4px solid #5A189A;
-  padding-left: 0.5rem;
-  color: #fff;
+
+/* Personalizar más el header */
+
+header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
-.container-fluid {
-  min-height: 100vh;
+
+/* Añadir transición y hover a las tarjetas de corte */
+
+.corte-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
 }
 
-.img-fluid {
-  border-radius: 1rem;
+.corte-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }

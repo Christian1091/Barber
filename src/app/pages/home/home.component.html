@@ -1,0 +1,16 @@
+<section class="container text-white my-5">
+    <h2 class="mb-4 text-center">Tipos de Cortes</h2>
+    <div class="row g-4">
+        <div class="col-md-4" *ngFor="let corte of cortes">
+            <div class="card bg-dark text-white h-100 border-0 shadow-lg rounded-4 overflow-hidden corte-card">
+                <div class="corte-img-container">
+                    <img [src]="corte.imagen" class="card-img-top corte-img" [alt]="corte.nombre">
+                </div>
+                <div class="card-body py-3">
+                    <h5 class="card-title mb-2">{{ corte.nombre }}</h5>
+                    <p class="card-text small">{{ corte.descripcion }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

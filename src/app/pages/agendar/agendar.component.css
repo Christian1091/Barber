@@ -1,0 +1,10 @@
+.custom-card {
+    background-color: rgba(40, 40, 40, 0.95);
+    /* fondo semi-transparente */
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    max-width: 900px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
