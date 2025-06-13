@@ -1,37 +1,38 @@
-<div class="modal fade show d-block" tabindex="-1" role="dialog" style="background-color: rgba(0, 0, 0, 0.5);">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
+<div class="modal fade show d-block" tabindex="-1" role="dialog" style="background-color: rgba(0, 0, 0, 0.7);">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content bg-dark text-white rounded-4 shadow-lg border-0">
 
-      <div class="modal-header">
-        <h5 class="modal-title">Agenda de {{ selectedBarber.name }}</h5>
-        <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
-      </div>
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold text-white">Agenda de {{ selectedBarber.name }}</h5>
+                <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="close()"></button>
+            </div>
 
-      <div class="modal-body">
-        <table class="table table-bordered text-center">
-          <thead>
-            <tr>
-              <th></th>
-              <th *ngFor="let day of days">{{ day }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let hour of hours">
-              <th>{{ hour }}</th>
-              <td *ngFor="let day of days" [ngClass]="getSlotClass(day, hour)" (click)="toggleSlot(day, hour)">
-                {{ getSlotText(day, hour) }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center table-dark table-hover align-middle rounded-3 overflow-hidden">
+                        <thead class="table-light text-dark">
+                            <tr>
+                                <th></th>
+                                <th *ngFor="let day of days">{{ day }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let hour of hours">
+                                <th class="fw-semibold">{{ hour }}</th>
+                                <td *ngFor="let day of days" class="selectable-slot" [ngClass]="getSlotClass(day, hour)" (click)="toggleSlot(day, hour)">
+                                    {{ getSlotText(day, hour) }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" (click)="close()">Cerrar</button>
-        <button type="button" class="btn btn-primary" [disabled]="!selectedSlot"
-          (click)="confirmBooking()">Agendar</button>
-      </div>
+            <div class="modal-footer border-0 d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-light rounded-pill px-4" (click)="close()">Cerrar</button>
+                <button type="button" class="btn btn-primary rounded-pill px-4 shadow" [disabled]="!selectedSlot" (click)="confirmBooking()">Agendar</button>
+            </div>
 
+        </div>
     </div>
-  </div>
 </div>

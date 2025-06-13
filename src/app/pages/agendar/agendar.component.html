@@ -1,0 +1,10 @@
+<section id="agendar" class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="custom-card text-center mx-auto">
+            <h2 class="display-6 mb-4">Nuestros Barberos</h2>
+            <app-barber-list (selectBarber)="openBooking($event)"></app-barber-list>
+
+            <app-booking *ngIf="selectedBarber" [selectedBarber]="selectedBarber" [existingBookings]="existingBookings" (bookingConfirmed)="addBooking($event)" (closePopup)="closeBooking()"></app-booking>
+        </div>
+    </div>
+</section>

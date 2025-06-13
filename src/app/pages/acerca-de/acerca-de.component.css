@@ -1,0 +1,59 @@
+#acerca {
+    background-color: #1c1c1e;
+    /* Mismo fondo que el resto */
+    min-height: 100vh;
+    /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+}
+
+.acerca-container {
+    display: inline-block;
+    background: linear-gradient(145deg, #2a2a2e, #1f1f22);
+    color: #f1f1f1;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    max-width: 600px;
+    margin: 0;
+}
+
+.acerca-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+.acerca-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #ffcc00;
+    padding-left: 1rem;
+    display: inline-block;
+    text-align: left;
+}
+
+.acerca-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #dcdcdc;
+    text-align: justify;
+}
+
+@media (max-width: 600px) {
+    .acerca-container {
+        padding: 1.5rem;
+    }
+    .acerca-title {
+        font-size: 1.6rem;
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+    .acerca-text {
+        text-align: center;
+    }
+}

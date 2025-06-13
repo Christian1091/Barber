@@ -1,0 +1,27 @@
+.corte-img-container {
+    height: 180px;
+    overflow: hidden;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.corte-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-radius: 12px 12px 0 0;
+}
+
+.corte-card:hover .corte-img {
+    transform: scale(1.05);
+}
+
+.corte-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.corte-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
